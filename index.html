@@ -1,15 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Головна сторінка готелю</title>  
 </head>
 <body>
-    <h1>MEU</h1>
-    <ul>
-        <li>Denis</li>
-        <li>Senya</li>
-    </ul>
+    <!-- Основний контент сторінки -->
+    <main>
+        <!-- Зображення -->
+        <section>
+            <h2>Зображення</h2>
+            <img src="hotel.jpg" alt="Зображення готелю" width="600" height="400">
+        </section>
+
+        <!-- Таблиця -->
+        <section>
+            <h2>Таблиця</h2>
+            <table>
+                <tr>
+                    <th>Тип номера</th>
+                    <th>Ціна за ніч</th>
+                    <th>Опис</th>
+                </tr>
+                <tr>
+                    <td>Стандартний номер</td>
+                    <td>1500 грн</td>
+                    <td>Комфортний стандартний номер з усіма необхідними зручностями.</td>
+                </tr>
+                <tr>
+                    <td>Люкс</td>
+                    <td>3000 грн</td>
+                    <td>Розкішний люкс із чудовим видом та додатковими послугами.</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Списки -->
+        <section>
+            <h2>Списки (нумеровані, маркіровані)</h2>
+            <h3>Переваги нашого готелю</h3>
+            <ul>
+                <li>Сучасні зручності</li>
+                <li>Цілодобове обслуговування</li>
+                <li>Безкоштовний Wi-Fi</li>
+            </ul>
+
+            <h3>Як забронювати номер</h3>
+            <ol>
+                <li>Оберіть тип номера</li>
+                <li>Заповніть форму бронювання</li>
+                <li>Очікуйте підтвердження</li>
+            </ol>
+        </section>
+        <section id="contact">
+            <h2>Форма</h2>
+            <form action="/submit" method="post">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Електронна пошта:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="domain_description.html">Опис предметної галузі та бізнес логіки</a></p>
+    </footer>
+
 </body>
 </html>
