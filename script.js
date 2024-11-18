@@ -22,7 +22,9 @@ nextButton.addEventListener('click', () => {
 
 window.addEventListener('resize', updateCarousel);
 
+// Работа с видео
 const video = document.getElementById('background-video');
 
-// Зменшуємо швидкість відтворення відео до 0.5
-video.playbackRate = 0.5;
+// Уменьшаем скорость воспроизведения
+video.playbackRate = 1;
+

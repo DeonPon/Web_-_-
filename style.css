@@ -1,105 +1,182 @@
-/* Стиль для відео */
+/* Сброс отступов и полей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили для body */
+body {
+    background-color: #212932; /* Цвет фона */
+    color: #ececed; /* Цвет текста */
+    font-family: 'Comfortaa', Arial, sans-serif; /* Шрифт Comfortaa */
+    overflow-x: hidden; /* Убираем горизонтальный скролл */
+}
+
+/* Контейнер для навигации и логотипа */
+.top-nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    background-color: rgba(33, 41, 50, 0.9); /* Прозрачный фон */
+    z-index: 1;
+    height: 56px;
+}
+
+/* Логотип */
+.logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Навигационные ссылки */
+.navigation a {
+    color: #fff;
+    font-size: 16px;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #c9a66b;
+}
+
+/* Кнопка входа */
+.login-button img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Герой-блок с видео */
 .hero {
     position: relative;
-    height: 100vh;
+    width: 100%;
+    height: 86vh;
     overflow: hidden;
 }
 
 #background-video {
-    position: fixed; /* Фіксує відео на фоні */
-    top: 0;
-    left: 0;
-    width: 100%; /* Розтягує відео на всю ширину */
-    height: 100%; /* Розтягує відео на всю висоту */
-    object-fit: cover; /* Зберігає пропорції, розтягує відео так, щоб воно заповнювало весь екран */
-    z-index: -1; /* Відео знаходиться за іншими елементами */
-}
-
-/* Накладка для затемнення фону */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Зменшено затемнення, щоб відео було більш видимим */
-    z-index: 0; /* Накладка над відео */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ebdcb2;
 }
 
-/* Стиль для тексту на фоні */
-.hero-content h1, .hero-content p {
-    font-size: 2rem;
-    margin: 10px;
-}
-
-.cta-button {
-    padding: 10px 20px;
-    background-color: #af4425;
-    color: #ebdcb2;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.cta-button:hover {
-    background-color: #c9a66b;
-}
-
-/* Галерея номерів */
-.room-gallery {
-    padding: 50px 20px;
-    text-align: center;
-    background: #662e1c;
-    color: #ebdcb2;
-    z-index: 1; /* Високий пріоритет для контенту */
-}
-
-.carousel {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-    z-index: 1; /* Високий пріоритет для каруселі */
-}
-
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-images img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    flex-shrink: 0;
-}
-
-.carousel-btn {
+/* Секция поиска */
+.search-form {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #af4425;
+    top: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-field {
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+.form-field label {
+    font-size: 16px;
+    color: #fff;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 5px;
     border: none;
-    color: #ebdcb2;
-    font-size: 1.5rem;
-    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+/* Кнопка поиска */
+.search-btn {
+    background-color: #af4425;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
 }
 
-.carousel-btn:hover {
-    background: #c9a66b;
+.search-btn:hover {
+    background-color: #662e1c;
 }
 
-.carousel-btn.prev {
-    left: 10px;
+/* Секция про готель */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
 }
 
-.carousel-btn.next {
-    right: 10px;
+.about-text {
+    width: 60%;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-text p, .about-text ul {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    width: 35%;
+    border-radius: 10px;
+}
+
+/* Секция с каруселью номеров */
+.room-types {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.room-types h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.room-types .carousel {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+.carousel-item {
+    width: 220px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-item p {
+    margin-top: 10px;
+    font-size: 18px;
 }
