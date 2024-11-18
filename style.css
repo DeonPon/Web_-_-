@@ -1,0 +1,105 @@
+/* Стиль для відео */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-video {
+    position: fixed; /* Фіксує відео на фоні */
+    top: 0;
+    left: 0;
+    width: 100%; /* Розтягує відео на всю ширину */
+    height: 100%; /* Розтягує відео на всю висоту */
+    object-fit: cover; /* Зберігає пропорції, розтягує відео так, щоб воно заповнювало весь екран */
+    z-index: -1; /* Відео знаходиться за іншими елементами */
+}
+
+/* Накладка для затемнення фону */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Зменшено затемнення, щоб відео було більш видимим */
+    z-index: 0; /* Накладка над відео */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ebdcb2;
+}
+
+/* Стиль для тексту на фоні */
+.hero-content h1, .hero-content p {
+    font-size: 2rem;
+    margin: 10px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #af4425;
+    color: #ebdcb2;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #c9a66b;
+}
+
+/* Галерея номерів */
+.room-gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background: #662e1c;
+    color: #ebdcb2;
+    z-index: 1; /* Високий пріоритет для контенту */
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 1; /* Високий пріоритет для каруселі */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #af4425;
+    border: none;
+    color: #ebdcb2;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #c9a66b;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
