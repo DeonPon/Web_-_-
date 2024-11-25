@@ -180,3 +180,63 @@ body {
     margin-top: 10px;
     font-size: 18px;
 }
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 525px; /* Висота блоку */
+    overflow: hidden;
+}
+
+/* Фон зображення */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg'); /* Замініть на шлях до вашого зображення */
+    background-size: cover; /* Покриття всієї області */
+    background-position: center; /* Центрування зображення */
+    background-repeat: no-repeat; /* Заборона повторення */
+    z-index: 0;
+    filter: brightness(0.8); /* Додає трохи темноти для контрасту з текстом */
+}
+
+/* Навігаційна панель */
+.top-nav {
+    position: relative; /* Залишаємо у відносному положенні */
+    z-index: 1; /* Піднімаємо над фоном */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    background-color: rgba(33, 41, 50, 0.9); /* Прозорий фон */
+    height: 56px;
+}
+
+/* Логотип */
+.logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Навігаційні посилання */
+.navigation a {
+    color: #fff;
+    font-size: 16px;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #c9a66b;
+}
+
+/* Кнопка входу */
+.login-button img {
+    width: 30px;
+    height: 30px;
+}
