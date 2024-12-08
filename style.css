@@ -1,27 +1,27 @@
-/* Сброс отступов и полей */
+/* Скидаємо відступи та поля для всіх елементів */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Основные стили для body */
+/* Основні стилі для body */
 body {
-    background-color: #212932; /* Цвет фона */
-    color: #ececed; /* Цвет текста */
+    background-color: #212932; /* Колір фону */
+    color: #ececed; /* Колір тексту */
     font-family: 'Comfortaa', Arial, sans-serif; /* Шрифт Comfortaa */
-    overflow-x: hidden; /* Убираем горизонтальный скролл */
+    overflow-x: hidden; /* Вимикаємо горизонтальний скрол */
 }
 
-/* Контейнер для навигации и логотипа */
+/* Контейнер для навігації та логотипу */
 .top-nav {
     position: relative;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Використовуємо Flexbox для вирівнювання елементів */
+    justify-content: space-between; /* Вирівнюємо елементи по ширині */
+    align-items: center; /* Вертикальне вирівнювання */
     padding: 5px 30px;
-    background-color: rgba(33, 41, 50, 0.9); /* Прозрачный фон */
+    background-color: rgba(33, 41, 50, 0.9); /* Прозорий фон */
     z-index: 1;
     height: 56px;
 }
@@ -33,7 +33,7 @@ body {
     object-fit: contain;
 }
 
-/* Навигационные ссылки */
+/* Навігаційні посилання */
 .navigation a {
     color: #fff;
     font-size: 16px;
@@ -45,13 +45,13 @@ body {
     color: #c9a66b;
 }
 
-/* Кнопка входа */
+/* Кнопка входу */
 .login-button img {
     width: 30px;
     height: 30px;
 }
 
-/* Герой-блок с видео */
+/* Герой-блок з відео */
 .hero {
     position: relative;
     width: 100%;
@@ -65,13 +65,13 @@ body {
     height: 100%;
 }
 
-/* Секция поиска */
+/* Секція пошуку */
 .search-form {
     position: absolute;
     top: 20%;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: flex; /* Використовуємо Flexbox для вирівнювання елементів */
+    justify-content: center; /* Центруємо елементи всередині контейнера */
 }
 
 .search-container {
@@ -80,13 +80,13 @@ body {
     border-radius: 10px;
     width: 50%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap; /* Перехід елементів на новий рядок при нестачі місця */
+    justify-content: space-between; /* Вирівнювання елементів по ширині */
+    align-items: center; /* Вертикальне вирівнювання елементів */
 }
 
 .form-field {
-    width: 48%;
+    width: 48%; /* Ширина полів форми */
     margin-bottom: 10px;
 }
 
@@ -105,7 +105,7 @@ body {
     background-color: #f2f2f2;
 }
 
-/* Кнопка поиска */
+/* Кнопка пошуку */
 .search-btn {
     background-color: #af4425;
     color: #fff;
@@ -120,15 +120,15 @@ body {
     background-color: #662e1c;
 }
 
-/* Секция про готель */
+/* Секція про готель */
 .about-section {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Використовуємо Flexbox для вирівнювання елементів */
+    justify-content: space-between; /* Вирівнюємо елементи по ширині */
     padding: 50px;
 }
 
 .about-text {
-    width: 60%;
+    width: 60%; /* Ширина текстової частини */
 }
 
 .about-text h2 {
@@ -142,11 +142,11 @@ body {
 }
 
 .about-image {
-    width: 35%;
+    width: 35%; /* Ширина зображення */
     border-radius: 10px;
 }
 
-/* Секция с каруселью номеров */
+/* Секція з каруселлю кімнат */
 .room-types {
     text-align: center;
     padding: 50px 0;
@@ -158,13 +158,13 @@ body {
 }
 
 .room-types .carousel {
-    display: flex;
-    justify-content: space-between;
-    overflow-x: auto;
+    display: flex; /* Використовуємо Flexbox для вирівнювання елементів */
+    justify-content: space-between; /* Вирівнюємо елементи по ширині */
+    overflow-x: auto; /* Дозволяємо горизонтальний скрол */
 }
 
 .carousel-item {
-    width: 220px;
+    width: 220px; /* Ширина кожного елемента */
     text-align: center;
     margin: 0 10px;
 }
@@ -181,6 +181,7 @@ body {
     font-size: 18px;
 }
 
+/* Герой-блок */
 .hero {
     position: relative;
     width: 100%;
@@ -195,12 +196,12 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('background.jpg'); /* Замініть на шлях до вашого зображення */
+    background-image: url('background.jpg'); /* Заміна на ваше зображення */
     background-size: cover; /* Покриття всієї області */
     background-position: center; /* Центрування зображення */
     background-repeat: no-repeat; /* Заборона повторення */
     z-index: 0;
-    filter: brightness(0.8); /* Додає трохи темноти для контрасту з текстом */
+    filter: brightness(0.8); /* Зменшення яскравості для кращого контрасту */
 }
 
 /* Навігаційна панель */
@@ -208,9 +209,9 @@ body {
     position: relative; /* Залишаємо у відносному положенні */
     z-index: 1; /* Піднімаємо над фоном */
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Використовуємо Flexbox для вирівнювання елементів */
+    justify-content: space-between; /* Вирівнюємо елементи по ширині */
+    align-items: center; /* Вертикальне вирівнювання */
     padding: 5px 30px;
     background-color: rgba(33, 41, 50, 0.9); /* Прозорий фон */
     height: 56px;
@@ -239,4 +240,13 @@ body {
 .login-button img {
     width: 30px;
     height: 30px;
+}
+
+/* Стиль для заголовка всередині section */
+section h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2em;
+    color: #5A4231;
+    text-align: center;
+    margin-bottom: 10px;
 }
